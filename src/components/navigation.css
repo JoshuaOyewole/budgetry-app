@@ -1,0 +1,11 @@
+
+.list-group{
+    list-style-type: none;
+    display: flex;
+}
+
+.list-group-link{
+    text-decoration: none;
+    color: #f4f4f4;
+    padding-right: 2rem;
+}
