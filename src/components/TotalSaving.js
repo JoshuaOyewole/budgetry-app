@@ -1,9 +1,13 @@
 import React from 'react'
 
-function TotalSaving(props) {
-    //Get savings from DB
-    //Calculate the total Savings
+function TotalSaving() {
+    //Get savings from localStorage
     const prevSaving = JSON.parse(localStorage.getItem('saving'));
+    console.log(prevSaving.map(cur => cur.amount));
+    
+    //sum up all the savings inputed
+    //Calculate total saving percentage
+
 
     return (
         <div className='totalSaving'>
