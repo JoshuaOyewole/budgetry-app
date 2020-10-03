@@ -1,7 +1,6 @@
 import React from 'react'
 
-function TotalSaving() {
-    //Get savings from localStorage
+function TotalSaving(props) {
     const prevSaving = JSON.parse(localStorage.getItem('saving'));
     console.log(prevSaving.map(cur => cur.amount));
     
