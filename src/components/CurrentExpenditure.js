@@ -21,7 +21,7 @@ function CurrentExpenditure() {
     return (
         <div className='currentExpenditure'>
             <h3 className='tertiary__header'>Current Expenditure {/* date */} (September)</h3>
-            <span className='currentExpenditure__balance'>${result.toFixed(2)}  <span className='currentExpenditure__balance--percentage'> </span></span>
+            <span className='currentExpenditure__balance'>${result}<span className='currentExpenditure__balance--percentage'> </span></span>
         </div>
     )
 }
