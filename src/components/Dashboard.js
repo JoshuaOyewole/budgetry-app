@@ -1,5 +1,5 @@
 import React from 'react'
-import './dashboard.css'
+import './Styles/dashboard.css'
 import CurrentIncome from './CurrentIncome'
 import CurrentExpenditure from './CurrentExpenditure'
 import TotalSaving from './TotalSaving'

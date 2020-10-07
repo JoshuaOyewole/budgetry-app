@@ -8,10 +8,13 @@ function Header() {
 
     
     return (
+        <>
+        {/* Navbar will be here */}<navbar />
         <div className='header container'>
                 <h1 className='primary__header'>Financial Record</h1>
                 <span className='header__date'>{month[curMonth]}, {year}</span>
         </div>
+        </>
     )
 }
 

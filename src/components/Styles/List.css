@@ -70,15 +70,12 @@
     display: flex;
 }
 
-<<<<<<< HEAD
-=======
 /* .clearfix::after {
     content: "";
     display: table;
     clear: both;
 } */
 
->>>>>>> b4dc467bd75a0cc6c1a83c6120b729ec60cf17f1
 .income {
     width: 475px; 
     margin-right: 7rem;
