@@ -33,24 +33,24 @@ function List(props) {
             var income_list = income_array.map(
                 (cur, index) => {
                 return <>
-                            <div className="item" key={cur.ID} id={`income-${cur.ID}`}>
-                            <div className="item__description">{cur.desc}</div>
+                    <div className="item" key={cur.ID} id={`income-${cur.ID}`}>
+                        <div className="item__description">{cur.desc}</div>
                             <div className="right">
                                 <div className="item__value">+ {cur.amount}</div>
-                                <div className="item__delete">
-                                    <button className="item__delete--btn">
-                                        <i className="ion-ios-close-outline"></i>
-                                    </button>
+                                    <div className="item__delete">
+                                        <button className="item__delete--btn">
+                                            <i className="ion-ios-close-outline"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </>
+                    </div> 
+                 </>
                 }
             )
         }
              
    }
-
+   
     return (
         <div className="list__container">
                 <div className="income">
