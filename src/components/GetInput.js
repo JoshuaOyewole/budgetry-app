@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import List from './List'
 
 function GetInput() {
     
@@ -61,19 +62,20 @@ const getInputs = e =>{
 
 const resetStates = ()=>{
     setDesc('')
-    setAmount('')
+    setAmount(0)
 }
 
     const storeNewData = (cat, type) =>{
 
         const ID = 0
 
-        cat.push({'ID': ID, 'desc': desc, 'amount': amount})
-
+        cat.push({'ID': ID, 'desc': desc, 'amount': parseInt(amount)})
+        
         switch (type) {
             case 'saving':
             localStorage.setItem('saving', JSON.stringify(cat))
             setSaving(cat)
+            
             break;
 
             case 'income':
@@ -96,7 +98,7 @@ const appendPreviousDatas = (prevCat, type) =>{
     const prevID = prevCat[prevCat.length - 1].ID
     const ID = prevID + 1
 
-    prevCat.push({'ID': ID, 'desc': desc, 'amount': amount})
+    prevCat.push({'ID': ID, 'desc': desc, 'amount': parseInt(amount)})
         switch (type) {
             case 'saving':
             localStorage.setItem('saving', JSON.stringify(prevCat))
@@ -138,12 +140,14 @@ const appendPreviousDatas = (prevCat, type) =>{
                     value={desc}
                     onChange={(e)=>setDesc(e.target.value)}
                     required
+                    placeholder = 'Enter a description ...'
                 />
                 <input
                     type='number'
                     name='amount'
                     value={amount}
                     onChange={(e)=>setAmount(e.target.value)} 
+                    placeholder='Enter amount'
                     required
                 />
                 <button 
@@ -152,6 +156,7 @@ const appendPreviousDatas = (prevCat, type) =>{
                 </button>
             </form>
         </div>
+        <List />
         </>
     )
 }
