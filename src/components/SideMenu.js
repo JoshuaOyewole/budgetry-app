@@ -6,7 +6,6 @@ function SideMenu() {
     return (
         <div className='sideMenu'>
             <NavBar />
-
         </div>
     )
 }

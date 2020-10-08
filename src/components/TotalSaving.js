@@ -19,7 +19,7 @@ function TotalSaving() {
   
 
     return (
-        <div className='totalSaving'>
+        <div className='totalSaving card'>
             <h3 className='tertiary__header'>Total Saving balance </h3>
             <span className='totalSaving__balance'>${result} <span className='totalSaving__balance--percentage'> </span></span>
         </div>

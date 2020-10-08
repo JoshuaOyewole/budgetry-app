@@ -7,19 +7,19 @@ function NavBar() {
             <ul className='navbar__list'>
                 <div className='flex'>
                     <i className='fas fa-2x'></i>
-                    <li> <a href='#'>Home</a></li>
+                    <li> <a href='#Home'>Home</a></li>
                 </div>
                 <div className='flex'>
                     <i className='fas fa-2x'></i>
-                    <li> <a href='#'>History</a></li>
+                    <li> <a href='#History'>History</a></li>
                 </div>
                 <div className='flex'>
                     <i className='fas fa-2x'></i>
-                    <li> <a href='#'>Balances</a></li>
+                    <li> <a href='#Balances'>Balances</a></li>
                 </div>
                 <div className='flex'>
                     <i className='fas fa-2x'></i>
-                    <li> <a href='#'>Report</a></li>
+                    <li> <a href='#Report'>Report</a></li>
                 </div>
             </ul>
             

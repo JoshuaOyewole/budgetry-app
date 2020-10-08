@@ -1,7 +1,16 @@
 .main{
-    background-color: rgb(244, 250, 243);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FBFBF2;
+    /* background-color: rgb(244, 250, 243); */
     color: rgb(0, 0, 0);
-    padding: 2rem;
     width: 79%;
-    height: 100vh;
+ /*    height: 100vh; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

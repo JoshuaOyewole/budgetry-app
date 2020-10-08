@@ -1,0 +1,21 @@
+.inputField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+    background-color: #f4f4f4; 
+    margin-bottom: 5rem;
+}
+
+select, input{
+    padding: .7rem 1rem;
+    margin-right: 1rem;
+}
+
+button{
+    padding: .9rem 2rem;  
+    background-color: #303841;   
+    color: #fff;
+    border: none;
+}

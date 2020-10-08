@@ -92,7 +92,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.icome__title { color: #28B9B5; }
+.icome__title { color: #1098F7; }
 .expenses__title { color: #FF5049; }
 
 .item {
@@ -115,11 +115,11 @@ h2 {
 
 .item__value {
     margin-right: .5rem;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 .item__percentage {
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     font-size: 11px;
     background-color: #FFDAD9;
     padding: 3px;
@@ -129,7 +129,7 @@ h2 {
 
 .income .item__value,
 .income .item__delete--btn {
-    color: #28B9B5;
+    color: #1098F7;
 }
 
 .expenses .item__value,

@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import List from './List'
+import './Styles/getInput.css'
 
 function GetInput() {
     
@@ -130,7 +131,7 @@ const appendPreviousDatas = (prevCat, type) =>{
                     onChange={(e)=>setType(e.target.value)}
                     required
                 >
-                    <option value='income'>Income</option>
+                    <option value='income' selected>Income</option>
                     <option value='expense'>Expense</option>
                     <option value='saving'>Savings</option>
                 </select>
