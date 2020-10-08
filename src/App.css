@@ -5,33 +5,23 @@
 }
 
 html{
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body{
-  background: linear-gradient(to right, #63ACB0, #1D3679);
   min-height: 100vh;
-  margin: 0 auto;
   font-size: 1.6rem;
-  color: #f4f4f4;
+  color: #0a0909;
 }
 
 .container{
-/*   max-width: 140rem; */
-  padding: 3rem 2rem;
+  max-width: 140rem; 
+  padding: 0rem 2rem;
 }
 
 .App{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  width: 100vw;
   margin: 0 auto;
-}
-
-.header{
-  background-color: #333;
-  text-align: center;
-  padding: 2rem 4rem;
 }

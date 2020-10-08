@@ -7,8 +7,12 @@
 /.vscode
 garbage.txt
 waste.env
+/fontawesome-free-5.14.0-web/
+fontawesome-free-5.14.0-web/
+public/all.min.css
 package-lock.json
-
+src/Assets/toggle-off.svg
+src/Assets/toggle-on.svg
 # testing
 /coverage
 

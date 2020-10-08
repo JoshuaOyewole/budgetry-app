@@ -1,5 +1,5 @@
 import React from 'react'
-import './List.css'
+import './Styles/List.css'
 
 function List(props) {
     if(localStorage.length > 0){

@@ -1,0 +1,28 @@
+
+.dashboard{
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+/*  background-color: rgb(9, 61, 26); background-color: #A74482;*/
+    background-color: rgb(5, 86, 100);
+    color: #FBFBF2;
+    padding: 4.5rem 2.5rem;
+    border-radius: .7rem;
+    margin: 3rem 6rem 2rem 0;
+    height: 15rem;
+}
+
+.card:last-child{
+    margin-right: 0;
+}
+
+/* 
+ff5722
+00adb5
+*/
