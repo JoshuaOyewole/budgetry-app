@@ -15,7 +15,8 @@ src/Assets/toggle-off.svg
 src/Assets/toggle-on.svg
 # testing
 /coverage
-
+josh.html
+josh.css
 # production
 /build
 

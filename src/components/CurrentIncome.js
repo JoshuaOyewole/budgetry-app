@@ -20,7 +20,7 @@ function CurrentIncome() {
 
     return (
         <div className='totalIncome card'>
-            <h3 className='tertiary__header'>Total Income balance </h3>
+            <h3 className='tertiary__header'>TOTAL INCOME BALANCE</h3>
             <span className='totalIncome__balance'>${result} <span className='totalIncome__balance--percentage'></span></span>
         </div>
     )
