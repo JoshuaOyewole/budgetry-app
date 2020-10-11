@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import List from './List'
 import './Styles/getInput.css'
+import Button from '@material-ui/core/Button';
 
 function GetInput() {
     
@@ -22,11 +23,11 @@ const getInputs = e =>{
         case 'saving':
 
         if(prevSaving !== null){  
-            appendPreviousDatas(prevSaving, type)
+            appendPreviousDatas(prevSaving, type, desc, amount)
             resetStates()
         }
         else{
-            storeNewData(saving, type)
+            storeNewData(saving, type, desc, amount)
             resetStates()
         }
         break;
@@ -34,11 +35,11 @@ const getInputs = e =>{
         case 'income':
 
         if(prevIncome !== null){  
-            appendPreviousDatas(prevIncome, type)
+            appendPreviousDatas(prevIncome, type, desc, amount)
             resetStates()
         }
         else{
-            storeNewData(income, type)
+            storeNewData(income, type, desc, amount)
             resetStates()
         }
         break;
@@ -46,12 +47,12 @@ const getInputs = e =>{
         case 'expense':
 
         if(prevExpense !== null){  
-            appendPreviousDatas(prevExpense, type)
+            appendPreviousDatas(prevExpense, type, desc, amount)
             resetStates()
         }
 
         else{
-            storeNewData(expense, type)
+            storeNewData(expense, type, desc, amount)
             resetStates()
         }
         break;
@@ -63,10 +64,10 @@ const getInputs = e =>{
 
 const resetStates = ()=>{
     setDesc('')
-    setAmount(0)
+    setAmount('')
 }
 
-    const storeNewData = (cat, type) =>{
+    const storeNewData = (cat, type, desc, amount) =>{
 
         const ID = 0
 
@@ -94,12 +95,12 @@ const resetStates = ()=>{
         }
     }
 
-const appendPreviousDatas = (prevCat, type) =>{
+const appendPreviousDatas = (prevCat, type, desc, amount) =>{
     //Initializing ID
     const prevID = prevCat[prevCat.length - 1].ID
-    const ID = prevID + 1
+    const id = prevID + 1
 
-    prevCat.push({'ID': ID, 'desc': desc, 'amount': parseInt(amount)})
+    prevCat.push({'ID': id, 'desc': desc, 'amount': parseInt(amount)})
         switch (type) {
             case 'saving':
             localStorage.setItem('saving', JSON.stringify(prevCat))
@@ -131,7 +132,7 @@ const appendPreviousDatas = (prevCat, type) =>{
                     onChange={(e)=>setType(e.target.value)}
                     required
                 >
-                    <option value='income' selected>Income</option>
+                    <option value='income'>Income</option>
                     <option value='expense'>Expense</option>
                     <option value='saving'>Savings</option>
                 </select>
@@ -151,10 +152,13 @@ const appendPreviousDatas = (prevCat, type) =>{
                     placeholder='Enter amount'
                     required
                 />
-                <button 
+                <Button 
+                    style={{'padding': '.5rem 3rem', 'fontSize': '1.4rem'}}
+                    variant="contained"
+                    color="secondary"
                     type='submit'
                     name='submit'> Add 
-                </button>
+                </Button>
             </form>
         </div>
         <List />

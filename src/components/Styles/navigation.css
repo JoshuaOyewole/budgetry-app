@@ -10,6 +10,7 @@
     padding-right: 2rem;
 }
 
-.logo{
-    color: #0797FC;
+.nav_flex{
+    display: inline-block;
+    align-items: center;
 }
