@@ -92,7 +92,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.icome__title { color: #1098F7; }
+.income__title { color: #1098F7; }
 .expenses__title { color: #FF5049; }
 
 .item {
@@ -125,6 +125,7 @@ h2 {
     padding: 3px;
     border-radius: 3px;
     text-align: center;
+    margin-right: 1rem;
 }
 
 .income .item__value,

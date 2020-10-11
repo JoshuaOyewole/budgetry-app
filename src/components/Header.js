@@ -21,6 +21,7 @@ function Header() {
                         <span className='greeting'>Good Morning,</span>
                         <span className='profile_username'>Joshua O.</span>
                     </div>
+                    <i className="fas fa-caret-down ml-small"></i>
                 </div> 
             </div>   
             <div className='header__bottom'>
