@@ -3,14 +3,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #FEFEFE;
-    /* background-color: rgb(244, 250, 243); */
     color: rgb(0, 0, 0);
     width: 79%;
- /*    height: 100vh; */
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    height: 100vh; 
 }

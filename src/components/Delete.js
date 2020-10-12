@@ -3,13 +3,12 @@ import React from 'react'
 function Delete() {
 
      const delItem = (e)=>{
-        
+         
         const type_income = 'income';
         const type_expense = 'expense';
         const parentItem = e.target.parentNode.parentNode.parentNode.parentNode.parentNode;
         const childItem = e.target.parentNode.parentNode.parentNode.parentNode;
     
-        
         parentItem.removeChild(childItem); 
         const parentItem__className =  parentItem.className.includes('expense');
         
@@ -46,7 +45,6 @@ function Delete() {
                 localStorage.setItem(type, JSON.stringify(listArr));
             } 
     } 
-    window.addEventListener('click', delItem)
     return (
         <i 
             style={{color: 'red'}} 
