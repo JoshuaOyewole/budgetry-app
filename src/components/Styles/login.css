@@ -1,0 +1,49 @@
+.login{
+    /* max-height: 100vh; */ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10rem auto; 
+    background-color: #19222A;
+    padding: 5rem 4rem;
+}
+
+/* .login-form{
+    padding: 5rem 3rem; 
+}*/
+
+.form-control{
+    margin: 2.5rem 0;
+}
+
+.form-group{
+    padding: .8rem 1rem;
+    border: none;
+    outline: none;
+} 
+
+
+label{
+    margin-bottom: 1rem;
+    display: inline-block;
+    color: bisque;
+}
+
+.btn-submit{
+   background-color: #0797FC;
+   font-weight: bold;
+}
+
+ .header{
+    margin-top: .5rem
+}
+
+ .logo {
+    margin-right: 1rem;
+    color: rgb(254, 254, 255);
+    font-size: 2rem
+}
+ .logoText {
+    max-width: 20rem;
+}
