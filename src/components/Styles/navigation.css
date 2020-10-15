@@ -14,3 +14,40 @@
     display: inline-block;
     align-items: center;
 }
+
+.icons{ 
+    margin-right : 1rem;
+    color: #807777;
+    font-size: 2rem;
+}
+
+.link{
+    font-size: 2rem
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    margin-bottom: 2rem
+}
+
+.grid:hover {
+    background-color: red
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+    margin-top: 2rem
+}
+
+.logo {
+    margin-right: 1rem;
+    color: #057CD1;
+    font-size: 2rem;
+}
+.logoText {
+    max-width: 20rem;
+}

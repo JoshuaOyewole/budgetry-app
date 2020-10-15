@@ -1,0 +1,10 @@
+.del{
+    background-color: rgb(233, 223, 223);
+    padding: .2rem .6rem;
+    border-radius: 30%;
+    transition: 1s ease-in;
+}
+
+.del:hover{
+    background-color: rgb(255, 255, 255);
+}

@@ -1,9 +1,14 @@
 import React from 'react'
+import './Styles/delete.css'
 
 function Delete() {
 
-     const delItem = (e)=>{
-         
+        console.log('Hello');
+        
+      const delItem = (e)=>{
+       
+        console.log(e.target);
+        
         const type_income = 'income';
         const type_expense = 'expense';
         const parentItem = e.target.parentNode.parentNode.parentNode.parentNode.parentNode;
@@ -26,11 +31,11 @@ function Delete() {
             //Remove todo from localStorage
             removeList(childItem,incomes,type_income);
         } 
-    }
+    } 
         const removeList = (list,listArr, type) => {
      
             //Accessing the ID attribute of the current list element
-            const listID = list.id;
+             const listID = list.id;
             //Getting the id number of the current list element
             const id = listID.split('-')[1];
             
@@ -43,14 +48,16 @@ function Delete() {
             else{
                 listArr.splice(id,1);
                 localStorage.setItem(type, JSON.stringify(listArr));
-            } 
+            }  
     } 
     return (
-        <i 
+         <span 
             style={{color: 'red'}} 
             onClick={delItem}
-            className="fas fa-trash"> 
-        </i>
+            className="del"> X
+        </span> 
+        
+
     )
 } 
 
