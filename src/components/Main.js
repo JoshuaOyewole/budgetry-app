@@ -14,7 +14,7 @@ function Main() {
             <div className='dashboard container'>
                 <CurrentIncome />
                 <CurrentExpenditure />
-                <TotalSaving />
+                <TotalSaving />z
             </div> 
             <GetInput />
         </div>

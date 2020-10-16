@@ -7,10 +7,10 @@ import TotalSaving from './TotalSaving'
 function Dashboard() {
     return (
         <div className='dashboard container'>
-            <CurrentIncome />
+            {/* <CurrentIncome />
             <CurrentExpenditure />
-            <TotalSaving />
-        </div>
+            <TotalSaving /> */}
+        </div> 
     )
 }
 

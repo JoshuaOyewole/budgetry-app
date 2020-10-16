@@ -37,7 +37,7 @@ function Login() {
         <div className='login'>
             <header>
             <div className='header'>
-                <i className="fas fa-landmark"  className='logo'></i> 
+                <i className="fas fa-landmark logo"></i> 
                 <img src={logos} className='logoText' alt='manageFunds logo' />
             </div>
             </header>

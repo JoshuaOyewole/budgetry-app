@@ -36,12 +36,15 @@ label{
 }
 
  .header{
+     display: flex;
+     justify-content: center;
+     align-items: center;
     margin-top: .5rem
 }
 
  .logo {
     margin-right: 1rem;
-    color: rgb(254, 254, 255);
+    color: #0797FC;
     font-size: 2rem
 }
  .logoText {
