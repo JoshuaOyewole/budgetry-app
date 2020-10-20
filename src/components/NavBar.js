@@ -1,5 +1,6 @@
 import React from 'react'
 import logos from '../Assets/logo.png'
+import { NavLink } from 'react-router-dom'
 
 function NavBar() {
 
@@ -44,19 +45,23 @@ function NavBar() {
             <ul className='navbar__list'>
                     <li style={grid}>
                         <i className='fas fa-home' style={icons}></i>
-                        <a href='#Home' style={link}>Home</a>
+                        <NavLink to='/' style={link}>Home</NavLink>
                     </li>              
                     <li style={grid}> 
                         <i className='fas fa-history' style={icons}></i>
-                        <a href='#History' style={link}>History</a>
+                        <NavLink to='/history' style={link}>History</NavLink>
                     </li> 
                     <li style={grid}> 
                         <i className="fas fa-balance-scale-right" style={icons}></i>
-                        <a href='#Balances' style={link}>Balances</a>
+                        <NavLink to='/balance' style={link}>Balance</NavLink>
                     </li>
                     <li style={grid}> 
                         <i className="fas fa-file-invoice" style={icons}></i>
-                        <a href='#Report' style={link}>Report</a>
+                        <NavLink to='/report' style={link}>Report</NavLink>
+                    </li>
+                    <li style={grid}> 
+                        <i className="fas fa-file-invoice" style={icons}></i>
+                        <NavLink to='/' style={link}>Logout</NavLink>
                     </li>
             </ul>
             

@@ -1,25 +1,34 @@
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import './Styles/login.css'
 import logos from '../Assets/logo.png'
+import {useHistory} from "react-router-dom";
+import {userContext} from '../App'
 
-function Login() {
+function Login({onLogin}) {
    
+    let history = useHistory();
+    let user = useContext(userContext)
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-     const submitForm = (e) => {
+ 
+    const submitForm = (e) => {
+      
          e.preventDefault();
          
          //Query users datas from localStorage
          const queryDB = JSON.parse(localStorage.getItem('users')); 
 
          //Check if the userDB is empty or not
-         if(queryDB !==null){
+         if(queryDB !== null){
             for( const user of queryDB){
                 if (user.username === username && user.password === password){
-                    alert('User details found')
                     clearFields();
+                    onLogin(true);
+                    history.push("/home")
                 }
+
                 else{
                     alert('Invalid details entered')
                     clearFields();
@@ -30,15 +39,17 @@ function Login() {
 
      const clearFields = () =>{
          setUsername('');
-         setPassword('')
+         setPassword('');   
      }
 
     return (
+        <>
         <div className='login'>
             <header>
             <div className='header'>
                 <i className="fas fa-landmark logo"></i> 
                 <img src={logos} className='logoText' alt='manageFunds logo' />
+                <p>Hello {user} </p>
             </div>
             </header>
             <form 
@@ -74,7 +85,9 @@ function Login() {
                     >  Login </button>
                 </div>
             </form>
+  
         </div>
+        </>
     )
 }
 

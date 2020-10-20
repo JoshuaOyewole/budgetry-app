@@ -13,6 +13,14 @@ public/all.min.css
 package-lock.json
 src/Assets/toggle-off.svg
 src/Assets/toggle-on.svg
+
+Topics.js
+Topic.js
+Testing.js
+testing.html
+SecondNav.js
+ScrollToTop.js
+
 # testing
 /coverage
 josh.html

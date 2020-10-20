@@ -2,8 +2,6 @@ import React from 'react'
 import './Styles/delete.css'
 
 function Delete() {
-
-        console.log('Hello');
         
       const delItem = (e)=>{
        
