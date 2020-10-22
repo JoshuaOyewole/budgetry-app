@@ -1,27 +1,24 @@
 import React, {useState} from 'react'
+import { Switch, Route, Redirect} from 'react-router-dom'
+//Components
 import Login from './components/Login'
 import Home from './components/Home'
-import { Switch, Route, Redirect} from 'react-router-dom'
 import ErrorPage from './components/ErrorPage'
 import History from './components/History'
 import Balance from './components/Balance'
 import Report from './components/Report'
+import Register from './components/Register'
 
-
-export const userContext = React.createContext();
 
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] =  useState(false);
-  const username = 'Orisfina'
   
   return (
     <div className='App'>
       <Switch>
         <Route path="/" exact >
-        <userContext.Provider value={username} >
           <Login onLogin={setIsLoggedIn} />
-          </userContext.Provider>
         </Route> 
         <Route path="/home">
           { isLoggedIn ? 
@@ -46,6 +43,9 @@ function App() {
             <Report /> : 
             <Redirect to="/" />
           }
+        </Route>
+        <Route path="/register" >
+          <Register onLogin={setIsLoggedIn} /> 
         </Route>
         <Route component={ErrorPage} />
       </Switch>

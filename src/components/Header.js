@@ -1,13 +1,14 @@
-import React from 'react'
+import React, {useContext } from 'react'
 import './Styles/Header.css' 
 import Profile_pics from '../Assets/profile-pixs.jpg';
+import {usernameContext} from './Home'
 
 function Header() {
     const month = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const date = new Date();
     const curMonth = date.getMonth();
     const year = date.getFullYear()
-
+    const username = useContext(usernameContext)
     
     return (
         <>
@@ -19,7 +20,7 @@ function Header() {
                     <img src={Profile_pics} className='profile_pix--small'  alt='user_profile-pixs' />
                     <div className='flex'>
                         <span className='greeting'>Good Morning,</span>
-                        <span className='profile_username'>Joshua O.</span>
+                        <span className='profile_username'>{username}</span>
                     </div>
                     <i className="fas fa-caret-down ml-small"></i>
                 </div> 

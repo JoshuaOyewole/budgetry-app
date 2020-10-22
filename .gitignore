@@ -15,6 +15,7 @@ src/Assets/toggle-off.svg
 src/Assets/toggle-on.svg
 
 Topics.js
+Auth.js
 Topic.js
 Testing.js
 testing.html

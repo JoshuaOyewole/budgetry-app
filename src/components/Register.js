@@ -1,51 +1,34 @@
 import React, {useState} from 'react'
 import './Styles/login.css'
 import logos from '../Assets/logo.png'
-import {useHistory, withRouter, Link} from "react-router-dom";
+import {useHistory, Link} from "react-router-dom";
 
-
-function Login(props) {
-   
-    let history = useHistory();
+function Register() {
 
     const [uname, setUname] = useState('');
-    const [upass, setUpass] = useState('');
- 
+    const [upass, setUpass] = useState('')
+    const history = useHistory();
+
     const submitForm = (e) => {
       
-         e.preventDefault();
-         
-         //Query users datas from localStorage
-         const queryDB = JSON.parse(localStorage.getItem('users')); 
-
-         //Check if the userDB is empty or not
-         if(queryDB !== null){
-                if (queryDB.username === uname && queryDB.password === upass){
-                    props.onLogin(true); 
-                    history.push({
-                    pathname: "/home",
-                    state: {uname: uname}
-                    })
-                }
-                else alert('Invalid credentials entered!')
-        }  
-
-        else{
-            alert('Kindly click on the signup button to register first');
-         }
-    }
+        e.preventDefault()
+            
+        localStorage.setItem('users', JSON.stringify({username: uname, password: upass}));   
+        alert('Registration successful! Kindly login')
+        history.push("/")      
+    }  
     return (
         <>
-        <div className='login'>
+        <div className='register'>
             <header>
             <div className='header'>
                 <i className="fas fa-landmark logo"></i> 
                 <img src={logos} className='logoText' alt='manageFunds logo' />
             </div>
-            <h2 className='primary__header'>Login Form </h2>
+            <h2 className='primary__header'>Registration Form</h2>
             </header>
             <form 
-                className='login-form'  
+                className='register-form'  
                 onSubmit={submitForm}
             >
                 <div className='form-control'>
@@ -56,9 +39,11 @@ function Login(props) {
                         className='form-group'
                         onChange={(e)=>{setUname(e.target.value)}}
                         placeholder='Enter your username ...'
-                    />
+                        required
+                    /> 
+                
                 </div>
-              
+   
                 <div className='form-control'>
                 <label>Password: </label> <br/>
                     <input 
@@ -67,30 +52,33 @@ function Login(props) {
                         onChange={(e)=>{setUpass(e.target.value)}}
                         className='form-group'
                         placeholder='Enter your password..'
+                        required
                     />
                 </div>
+               
                 <div className='form-control'>
-                    <p>Not yet Register? Kindly 
+                    <p>Already Register? Kindly 
                        <Link 
-                            to='/register'
+                            to='/'
                             className=' btn__secondary m-l-small' 
                         > 
-                        Signup! 
+                        Login! 
                         </Link>
                     </p>
                 </div>
-               
                 <div className='form-control'>
                     <button 
                         type='submit'
                         className='btn-submit' 
-                    >  Login </button>
+                    >  
+                        Register
+                    </button>
                 </div>
             </form>
-  
+           
         </div>
         </>
     )
 }
 
-export default withRouter(Login)
+export default Register
