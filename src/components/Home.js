@@ -11,7 +11,7 @@ function Home(props) {
 
    useEffect(()=>{
     document.title = `${username} Dashboard`
-    },[username]) 
+    },[username])   
 
     return (
         <>

@@ -1,6 +1,7 @@
 import React from 'react'
 import logos from '../Assets/logo.png'
 import { NavLink } from 'react-router-dom'
+import {lout} from './Logout'
 
 function NavBar() {
 
@@ -61,7 +62,7 @@ function NavBar() {
                     </li>
                     <li style={grid}> 
                         <i className="fas fa-file-invoice" style={icons}></i>
-                        <NavLink to='/' style={link}>Logout</NavLink>
+                        <NavLink to="/logout" style={link} onClick={lout}>Logout</NavLink>
                     </li>
             </ul>
             

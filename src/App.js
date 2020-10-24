@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Switch, Route, Redirect} from 'react-router-dom'
+import { Switch, Route, Redirect, NavLink} from 'react-router-dom'
 //Components
 import Login from './components/Login'
 import Home from './components/Home'
@@ -12,13 +12,20 @@ import Register from './components/Register'
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] =  useState(false);
-  
+  let aut = JSON.parse(localStorage.getItem('isLoggedin'))
+
+  if(aut === null){
+    aut = false
+  }
+
+  let [isLoggedIn, setIsLoggedIn] =  useState(aut);
+ 
+ 
   return (
     <div className='App'>
       <Switch>
         <Route path="/" exact >
-          <Login onLogin={setIsLoggedIn} />
+          <Login onLogin={setIsLoggedIn} auth={isLoggedIn} />
         </Route> 
         <Route path="/home">
           { isLoggedIn ? 
@@ -44,6 +51,10 @@ function App() {
             <Redirect to="/" />
           }
         </Route>
+
+     {/*    Redirect a user to Homepage (Login component) after loging out */}
+        <Redirect from="/logout" to="/" />
+                
         <Route path="/register" >
           <Register onLogin={setIsLoggedIn} /> 
         </Route>

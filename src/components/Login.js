@@ -10,7 +10,7 @@ function Login(props) {
 
     const [uname, setUname] = useState('');
     const [upass, setUpass] = useState('');
- 
+    
     const submitForm = (e) => {
       
          e.preventDefault();
@@ -22,6 +22,8 @@ function Login(props) {
          if(queryDB !== null){
                 if (queryDB.username === uname && queryDB.password === upass){
                     props.onLogin(true); 
+                    
+                    localStorage.setItem('isLoggedin', true)
                     history.push({
                     pathname: "/home",
                     state: {uname: uname}
@@ -34,6 +36,7 @@ function Login(props) {
             alert('Kindly click on the signup button to register first');
          }
     }
+
     return (
         <>
         <div className='login'>
